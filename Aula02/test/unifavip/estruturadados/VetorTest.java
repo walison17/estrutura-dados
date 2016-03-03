@@ -56,18 +56,28 @@ public class VetorTest {
         assertTrue(vetor.tamanho() == 500000);
     }
 
+    
+    
     /**
      * Test of adicionaAluno method, of class Vetor.
      */
     @Test
     public void testAdicionaAluno_int_Aluno() {
+        //adiciona 500.000 registros na lista de alunos 
+        Vetor vetor = new Vetor(); 
+        for (int i = 0; i < 500000; i++) {
+            Aluno aluno = new Aluno("aluno"+i);
+            vetor.adicionaAluno(aluno);
+        }
+        
+        System.out.println("totalAlnos = "+vetor.tamanho());
+        //adiciona no meio da lista
         System.out.println("adicionaAluno");
-        int posicao = 150;
         Aluno aluno = new Aluno("Bill Gates");
-        Vetor vetor = new Vetor();
+        int posicao = vetor.tamanho()/2; 
         vetor.adicionaAluno(posicao, aluno);
         
-        assertTrue(vetor.tamanho() == 1);
+        assertTrue(vetor.pegaAluno(posicao) == aluno);
         
     }
 

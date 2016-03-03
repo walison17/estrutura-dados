@@ -14,22 +14,11 @@ public class Vetor implements IListaAlunos {
     private Aluno[] alunos = new Aluno[100];
     private int totalAlunos = 0;
 
-    private void gerarNovoArray(){
-        
-        if (this.totalAlunos == this.alunos.length){
-            //cria um novo array com o dobro do tamanho atual
-            Aluno[] novoArray = new Aluno[this.alunos.length*2];
-            System.arraycopy(alunos, 0, novoArray, 0, alunos.length);
-            this.alunos = novoArray;
-        }
-    }
-    
-    
     @Override
     public void adicionaAluno(Aluno aluno) {
-        
+
         this.geraNovoArray();
-        
+
         for (int i = 0; i < alunos.length; i++) {
 
             if (alunos[i] == null) {
@@ -43,9 +32,13 @@ public class Vetor implements IListaAlunos {
 
     @Override
     public void adicionaAluno(int posicao, Aluno aluno) {
-        
-        this.gerarNovoArray();
-        
+
+        //this.gerarNovoArray();
+        if (posicao > this.alunos.length) {
+            Aluno[] novoArray = new Aluno[posicao + 10];
+            this.alunos = novoArray;
+        }
+
         if (!posicaoValida(posicao)) {
             throw new IllegalArgumentException("Posição Inválida!");
         }
@@ -57,6 +50,10 @@ public class Vetor implements IListaAlunos {
         this.alunos[posicao] = aluno;
         //atualiza o total de alunos 
         this.totalAlunos++;
+    }
+
+    private boolean posicaoOcupada(int posicao) {
+        return posicao >= 0 && posicao < this.totalAlunos;
     }
 
     @Override
@@ -123,10 +120,6 @@ public class Vetor implements IListaAlunos {
         builder.append("]");
 
         return builder.toString();
-    }
-
-    private boolean posicaoOcupada(int posicao) {
-        return posicao >= 0 && posicao < this.totalAlunos;
     }
 
     private boolean posicaoValida(int posicao) {
