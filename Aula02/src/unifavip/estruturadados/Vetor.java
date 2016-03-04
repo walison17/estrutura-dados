@@ -16,18 +16,12 @@ public class Vetor implements IListaAlunos {
 
     @Override
     public void adicionaAluno(Aluno aluno) {
-
-        this.geraNovoArray();
-
-        for (int i = 0; i < alunos.length; i++) {
-
-            if (alunos[i] == null) {
-                alunos[i] = aluno;
-                totalAlunos++;
-                break;
-            }
-
+        if (aluno != null) {
+            this.geraNovoArray();
+            alunos[totalAlunos] = aluno;
+            totalAlunos++;
         }
+
     }
 
     @Override
@@ -82,8 +76,8 @@ public class Vetor implements IListaAlunos {
     public boolean contem(Aluno aluno) {
         boolean contemAluno = false;
 
-        for (int i = 0; i < alunos.length; i++) {
-            if (alunos[i] != null && alunos[i].equals(aluno)) {
+        for (Aluno aluno1 : alunos) {
+            if (aluno1 != null && aluno1.equals(aluno)) {
                 contemAluno = true;
                 break;
             }
@@ -130,11 +124,18 @@ public class Vetor implements IListaAlunos {
         if (this.totalAlunos == this.alunos.length) {
             Aluno[] novoArray = new Aluno[alunos.length * 2];
             //passa todos os alunos alocados para o novo array
-            for (int i = 0; i < alunos.length; i++) {
-                novoArray[i] = alunos[i];
-            }
+            System.arraycopy(alunos, 0, novoArray, 0, alunos.length);
 
             this.alunos = novoArray;
+        }
+    }
+
+    private void gerarNovoArray2() {
+        if (this.totalAlunos == this.alunos.length) {
+            Aluno[] novoArray = new Aluno[alunos.length * 2];
+            for (int i = 0; i < this.alunos.length; i++) {
+                novoArray[i] = this.alunos[i];
+            }
         }
     }
 

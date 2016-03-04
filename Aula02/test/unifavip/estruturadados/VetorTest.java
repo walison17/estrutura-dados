@@ -39,7 +39,18 @@ public class VetorTest {
 
     /**
      * Test of adicionaAluno method, of class Vetor.
+     * @return  
      */
+    
+    public Vetor carregarAlunos(){
+        Vetor vetor = new Vetor(); 
+        for (int i = 0; i < 500000; i++) {
+            Aluno aluno = new Aluno("aluno"+i);
+            vetor.adicionaAluno(aluno);
+        }
+        return vetor;
+    }
+    
     @Test
     public void testAdicionaAluno_Aluno() {
         System.out.println("adicionaAluno");
@@ -51,16 +62,58 @@ public class VetorTest {
             vetor.adicionaAluno(aluno);
         }
         long fim = System.currentTimeMillis();
-        System.out.println(fim - inicio +" ms");
+        System.out.println((fim - inicio)/1000 +"s");
          
         assertTrue(vetor.tamanho() == 500000);
     }
 
-    
+    @Test
+    public void testAdicionaAluno_comeco(){
+        //adicion um aluno no comeco da lista 
+        Vetor vetor = this.carregarAlunos();
+        
+        System.out.println("Adiciona aluno no inicio da lista");
+        long inicio = System.currentTimeMillis();
+        Aluno aluno_inicio = new Aluno("zuckerberg");
+        int posicao_inicio = 0;
+        vetor.adicionaAluno(posicao_inicio, aluno_inicio);
+        long fim = System.currentTimeMillis();
+        
+        System.out.print((fim - inicio)/1000 +" s");
+        
+        assertTrue(vetor.pegaAluno(posicao_inicio) == aluno_inicio);
+        assertTrue(vetor.tamanho() == 500001);
+    }
     
     /**
      * Test of adicionaAluno method, of class Vetor.
      */
+    
+    @Test
+    public void testAdicionarAluno_fim(){
+        //adiciona um aluno no fim da lista 
+        Vetor vetor = this.carregarAlunos();
+        
+        System.out.println("Adiciona aluno no fim da lista");
+        Aluno aluno_fim = new Aluno("Walison Filipe");
+        int posicao_fim = vetor.tamanho()-1;
+        vetor.adicionaAluno(posicao_fim, aluno_fim);
+        
+        assertTrue(vetor.pegaAluno(posicao_fim) == aluno_fim);
+    }
+    
+    @Test
+    public void testeAdicionAluno_meio(){
+        Vetor vetor = this.carregarAlunos();
+        
+        System.out.println("adiciona Aluno no meio da lista");
+        Aluno aluno_meio = new Aluno("Bill Gates");
+        int posicao = (vetor.tamanho()/2)-1; 
+        vetor.adicionaAluno(posicao-1, aluno_meio);
+        
+        assertTrue(vetor.pegaAluno(posicao-1) == aluno_meio);     
+    }
+    
     @Test
     public void testAdicionaAluno_int_Aluno() {
         //adiciona 500.000 registros na lista de alunos 
@@ -71,14 +124,8 @@ public class VetorTest {
         }
         
         System.out.println("totalAlnos = "+vetor.tamanho());
-        //adiciona no meio da lista
-        System.out.println("adicionaAluno");
-        Aluno aluno = new Aluno("Bill Gates");
-        int posicao = vetor.tamanho()/2; 
-        vetor.adicionaAluno(posicao, aluno);
-        
-        assertTrue(vetor.pegaAluno(posicao) == aluno);
-        
+        assertTrue(vetor.tamanho() == 500000);
+       
     }
 
     /**
