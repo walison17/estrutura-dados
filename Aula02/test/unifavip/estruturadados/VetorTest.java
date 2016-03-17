@@ -51,6 +51,15 @@ public class VetorTest {
         return vetor;
     }
     
+    
+    @Test
+    public void testRemover(){
+        Vetor vetor = this.carregarAlunos();
+        vetor.remove(50);
+        
+        assertTrue(vetor.tamanho() == 499999);
+    }
+    
     @Test
     public void testAdicionaAluno_Aluno() {
         System.out.println("adicionaAluno");

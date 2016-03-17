@@ -52,7 +52,7 @@ public class ListaSimples {
             this.adicionar(elemento);
         } else {
             Celula anterior = this.pegaCelula(posicao -1); //pega celula anterior
-            Celula nova = new Celula(anterior.getProxima(), elemento); 
+            Celula nova = new Celula(anterior.getProxima(), elemento); //insere o novo elemento no ponteiro da celula anterior
             anterior.setProxima(nova); //aponta a celula anterior para celula criada
             this.totalElementos++;   
         }

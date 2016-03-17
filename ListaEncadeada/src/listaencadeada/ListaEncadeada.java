@@ -21,8 +21,8 @@ public class ListaEncadeada {
         lista.adicionarNoComeço("filipe");
         lista.adicionarNoComeço("filipe");
         lista.adicionarNoComeço("foda-se");
-        lista.adicionar("ultimo");
-        lista.adicionar("ultimo");
+        lista.adicionar("inserido no fim");
+        lista.adicionarNoComeço("inserido no começo da lista");
         
         lista.imprimirLista();
         System.out.println(lista.tamanho());

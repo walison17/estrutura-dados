@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/walison%20filipe/Documents/NetBeansProjects/estrutura-unifavip/Aula02/src/unifavip/estruturadados/IListaAlunos.java</file>
-            <file>file:/C:/Users/walison%20filipe/Documents/NetBeansProjects/estrutura-unifavip/Aula02/src/unifavip/estruturadados/Aluno.java</file>
-            <file>file:/C:/Users/walison%20filipe/Documents/NetBeansProjects/estrutura-unifavip/Aula02/src/unifavip/estruturadados/Vetor.java</file>
-            <file>file:/C:/Users/walison%20filipe/Documents/NetBeansProjects/estrutura-unifavip/Aula02/test/unifavip/estruturadados/EstruturadadosSuite.java</file>
-            <file>file:/C:/Users/walison%20filipe/Documents/NetBeansProjects/estrutura-unifavip/Aula02/test/unifavip/estruturadados/VetorTest.java</file>
-            <file>file:/C:/Users/walison%20filipe/Documents/NetBeansProjects/estrutura-unifavip/Aula02/test/unifavip/estruturadados/AlunoTest.java</file>
-            <file>file:/C:/Users/walison%20filipe/Documents/NetBeansProjects/estrutura-unifavip/Aula02/test/unifavip/estruturadados/IListaAlunosTest.java</file>
+            <file>file:/home/walison/estrutura-dados/Aula03/src/unifavip/estruturadados/Vetor.java</file>
+            <file>file:/home/walison/estrutura-dados/Aula03/src/unifavip/estruturadados/IListaAlunos.java</file>
+            <file>file:/home/walison/estrutura-dados/Aula03/src/unifavip/estruturadados/ListaEncadeada.java</file>
+            <file>file:/home/walison/estrutura-dados/Aula03/src/unifavip/estruturadados/Aluno.java</file>
         </group>
     </open-files>
 </project-private>

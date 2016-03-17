@@ -65,9 +65,14 @@ public class Vetor implements IListaAlunos {
         if (!this.posicaoOcupada(posicao)) {
             throw new IllegalArgumentException("Posição inválida");
         }
-        for (int i = posicao; i < this.totalAlunos - 1; i++) {
-            this.alunos[i] = this.alunos[i + 1];
-        }
+        
+        //for (int i = posicao; i < this.totalAlunos - 1; i++) {
+        //    this.alunos[i] = this.alunos[i + 1];
+        //} 
+            
+        Aluno[] arrayTemp = new Aluno[this.totalAlunos];    
+        System.arraycopy(this.alunos, posicao+1, arrayTemp, posicao-1, this.totalAlunos - posicao -1);
+        
         this.totalAlunos--;
 
     }
