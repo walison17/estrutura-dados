@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="walison-ubuntu" name="unifavip.estruturadados.VetorTest" skipped="0" tests="11" time="0.541" timestamp="2016-03-24T19:24:25">
+<testsuite errors="0" failures="6" hostname="walison-ubuntu" name="unifavip.estruturadados.IListaAlunosTest" skipped="0" tests="7" time="0.048" timestamp="2016-03-24T19:24:03">
   <properties>
     <property name="netbeans.autoupdate.country" value="BR" />
     <property name="javac.test.classpath" value=":build/classes:/home/walison/netbeans-8.1/platform/modules/ext/junit-4.12.jar:/home/walison/netbeans-8.1/platform/modules/ext/hamcrest-core-1.3.jar" />
-    <property name="javac.includes" value="unifavip/estruturadados/VetorTest.java" />
+    <property name="javac.includes" value="unifavip/estruturadados/IListaAlunosTest.java" />
     <property name="ant.core.lib" value="/home/walison/netbeans-8.1/extide/ant/lib/ant.jar" />
     <property name="javadoc.windowtitle" value="" />
     <property name="user.dir" value="/home/walison/estrutura-dados/Aula03" />
@@ -28,7 +28,7 @@
     <property name="libs.hamcrest.classpath" value="/home/walison/netbeans-8.1/platform/modules/ext/hamcrest-core-1.3.jar" />
     <property name="libs.javac-api.javadoc" value="" />
     <property name="os.name" value="Linux" />
-    <property name="test.class" value="unifavip.estruturadados.VetorTest" />
+    <property name="test.class" value="unifavip.estruturadados.IListaAlunosTest" />
     <property name="libs.beans-binding.classpath" value="/home/walison/netbeans-8.1/java/modules/ext/beansbinding-1.2.1.jar" />
     <property name="ap.proc.none.internal" value="" />
     <property name="libs.JWSAntTasks.maven-pom" value="" />
@@ -40,7 +40,7 @@
     <property name="user.name" value="walison" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner unifavip.estruturadados.VetorTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/walison/estrutura-dados/Aula03/build/test/results/TEST-unifavip.estruturadados.VetorTest.xml crashfile=/home/walison/estrutura-dados/Aula03/build/junitvmwatcher2766944073312206163.properties propsfile=/home/walison/estrutura-dados/Aula03/build/junit1822807153192751373.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner unifavip.estruturadados.IListaAlunosTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/walison/estrutura-dados/Aula03/build/test/results/TEST-unifavip.estruturadados.IListaAlunosTest.xml crashfile=/home/walison/estrutura-dados/Aula03/build/junitvmwatcher180508421426873792.properties propsfile=/home/walison/estrutura-dados/Aula03/build/junit3141525315315365240.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -57,7 +57,7 @@
     <property name="netbeans.home" value="/home/walison/netbeans-8.1/platform" />
     <property name="build.compiler.emacs" value="true" />
     <property name="java.endorsed.dirs" value="/home/walison/jdk1.8.0_73/jre/lib/endorsed" />
-    <property name="test.includes" value="unifavip/estruturadados/VetorTest.java" />
+    <property name="test.includes" value="unifavip/estruturadados/IListaAlunosTest.java" />
     <property name="netbeans.dynamic.classpath" value="/home/walison/netbeans-8.1/platform/core/core-base.jar:/home/walison/netbeans-8.1/platform/core/asm-all-5.0.1.jar:/home/walison/netbeans-8.1/platform/core/core.jar:/home/walison/netbeans-8.1/platform/core/org-openide-filesystems-compat8.jar:/home/walison/netbeans-8.1/platform/core/org-netbeans-libs-asm.jar:/home/walison/netbeans-8.1/platform/core/org-openide-filesystems.jar:/home/walison/netbeans-8.1/platform/core/locale/core-base_zh_CN.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems-compat8_pt_BR.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems-compat8_zh_CN.jar:/home/walison/netbeans-8.1/platform/core/locale/core-base_ru.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems-compat8_ru.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems_zh_CN.jar:/home/walison/netbeans-8.1/platform/core/locale/core-base_pt_BR.jar:/home/walison/netbeans-8.1/platform/core/locale/core_ru.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems-compat8_ja.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems_ja.jar:/home/walison/netbeans-8.1/platform/core/locale/core-base_ja.jar:/home/walison/netbeans-8.1/platform/core/locale/core_pt_BR.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems_ru.jar:/home/walison/netbeans-8.1/platform/core/locale/org-netbeans-libs-asm_ru.jar:/home/walison/netbeans-8.1/platform/core/locale/org-netbeans-libs-asm_pt_BR.jar:/home/walison/netbeans-8.1/platform/core/locale/core_zh_CN.jar:/home/walison/netbeans-8.1/platform/core/locale/org-openide-filesystems_pt_BR.jar:/home/walison/netbeans-8.1/platform/core/locale/core_ja.jar:/home/walison/netbeans-8.1/platform/core/locale/org-netbeans-libs-asm_zh_CN.jar:/home/walison/netbeans-8.1/platform/core/locale/org-netbeans-libs-asm_ja.jar:/home/walison/netbeans-8.1/nb/core/org-netbeans-upgrader.jar:/home/walison/netbeans-8.1/nb/core/locale/org-netbeans-upgrader_ja.jar:/home/walison/netbeans-8.1/nb/core/locale/org-netbeans-upgrader_zh_CN.jar:/home/walison/netbeans-8.1/nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/home/walison/netbeans-8.1/nb/core/locale/core_nb_ja.jar:/home/walison/netbeans-8.1/nb/core/locale/core_nb_ru.jar:/home/walison/netbeans-8.1/nb/core/locale/core_nb_zh_CN.jar:/home/walison/netbeans-8.1/nb/core/locale/core_nb.jar:/home/walison/netbeans-8.1/nb/core/locale/core_nb_pt_BR.jar:/home/walison/netbeans-8.1/nb/core/locale/org-netbeans-upgrader_ru.jar" />
     <property name="java.vm.specification.version" value="1.8" />
     <property name="libs.hibernate4-support.src" value="" />
@@ -71,7 +71,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="/" />
-    <property name="javac.includesfile.binary" value="/home/walison/estrutura-dados/Aula03/null1292463919" />
+    <property name="javac.includesfile.binary" value="/home/walison/estrutura-dados/Aula03/null64201465" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value=":build/classes:/home/walison/netbeans-8.1/platform/modules/ext/junit-4.12.jar:/home/walison/netbeans-8.1/platform/modules/ext/hamcrest-core-1.3.jar" />
@@ -83,7 +83,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="/home/walison/netbeans-8.1/ide/docs/jaxb-api-doc.zip" />
-    <property name="javac.includes.binary" value="/home/walison/estrutura-dados/Aula03/build/test/classes/unifavip/estruturadados/VetorTest.class" />
+    <property name="javac.includes.binary" value="/home/walison/estrutura-dados/Aula03/build/test/classes/unifavip/estruturadados/IListaAlunosTest.class" />
     <property name="ant.home" value="/home/walison/netbeans-8.1/extide/ant" />
     <property name="libs.junit_4.src" value="/home/walison/netbeans-8.1/platform/docs/junit-4.12-sources.jar" />
     <property name="ant.file.type.Aula02-impl" value="file" />
@@ -302,27 +302,42 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
   </properties>
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testTamanho" time="0.001" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testAdicionaAluno_Aluno" time="0.073" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testToString" time="0.0" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testAdicionaAluno_int_Aluno" time="0.179" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testAdicionarAluno_fim" time="0.179" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testPegaAluno" time="0.0" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testAdicionaAluno_comeco" time="0.03" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testListaTodos" time="0.0" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testeAdicionAluno_meio" time="0.042" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testContem" time="0.0" />
-  <testcase classname="unifavip.estruturadados.VetorTest" name="testRemove" time="0.0" />
+  <testcase classname="unifavip.estruturadados.IListaAlunosTest" name="testTamanho" time="0.005">
+    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
+	at unifavip.estruturadados.IListaAlunosTest.testTamanho(IListaAlunosTest.java:120)
+</failure>
+  </testcase>
+  <testcase classname="unifavip.estruturadados.IListaAlunosTest" name="testAdicionaAluno_Aluno" time="0.0" />
+  <testcase classname="unifavip.estruturadados.IListaAlunosTest" name="testAdicionaAluno_int_Aluno" time="0.0">
+    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
+	at unifavip.estruturadados.IListaAlunosTest.testAdicionaAluno_int_Aluno(IListaAlunosTest.java:63)
+</failure>
+  </testcase>
+  <testcase classname="unifavip.estruturadados.IListaAlunosTest" name="testPegaAluno" time="0.001">
+    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
+	at unifavip.estruturadados.IListaAlunosTest.testPegaAluno(IListaAlunosTest.java:78)
+</failure>
+  </testcase>
+  <testcase classname="unifavip.estruturadados.IListaAlunosTest" name="testListaTodos" time="0.001">
+    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
+	at unifavip.estruturadados.IListaAlunosTest.testListaTodos(IListaAlunosTest.java:134)
+</failure>
+  </testcase>
+  <testcase classname="unifavip.estruturadados.IListaAlunosTest" name="testContem" time="0.001">
+    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
+	at unifavip.estruturadados.IListaAlunosTest.testContem(IListaAlunosTest.java:106)
+</failure>
+  </testcase>
+  <testcase classname="unifavip.estruturadados.IListaAlunosTest" name="testRemove" time="0.001">
+    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
+	at unifavip.estruturadados.IListaAlunosTest.testRemove(IListaAlunosTest.java:91)
+</failure>
+  </testcase>
   <system-out><![CDATA[tamanho
 adicionaAluno
-0s
-toString
-totalAlnos = 500000
-Adiciona aluno no fim da lista
+adicionaAluno
 pegaAluno
-Adiciona aluno no inicio da lista
-0 slistaTodos
-adiciona Aluno no meio da lista
+listaTodos
 contem
 remove
 ]]></system-out>

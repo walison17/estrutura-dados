@@ -28,6 +28,11 @@ public class Executa {
         lista.add(new Funcionario("teste", "11", 0));
         lista.removeAll();
         System.out.println(lista.isEmpty() + "\n" + lista.size()); 
+        
+        for (int i = 0; i < 150; i++) {
+            lista.add(i , new Funcionario("teste", "i", 0));    
+        }
+         
     }
     
     

@@ -52,7 +52,6 @@ public class Vetor implements IListaAlunos {
 
     @Override
     public Aluno pegaAluno(int posicao) {
-
         if (!this.posicaoOcupada(posicao)) {
             throw new IllegalArgumentException("Posicao inválida!");
         }
@@ -61,15 +60,10 @@ public class Vetor implements IListaAlunos {
 
     @Override
     public void remove(int posicao) {
-
         if (!this.posicaoOcupada(posicao)) {
             throw new IllegalArgumentException("Posição inválida");
         }
         
-        //for (int i = posicao; i < this.totalAlunos - 1; i++) {
-        //    this.alunos[i] = this.alunos[i + 1];
-        //} 
-            
         Aluno[] arrayTemp = new Aluno[this.totalAlunos];    
         System.arraycopy(this.alunos, posicao+1, arrayTemp, posicao-1, this.totalAlunos - posicao -1);
         
@@ -102,7 +96,6 @@ public class Vetor implements IListaAlunos {
 
     @Override
     public String toString() {
-
         if (this.totalAlunos == 0) {
             return "[]";
         }
@@ -131,15 +124,6 @@ public class Vetor implements IListaAlunos {
             System.arraycopy(alunos, 0, novoArray, 0, alunos.length);
 
             this.alunos = novoArray;
-        }
-    }
-
-    private void gerarNovoArray2() {
-        if (this.totalAlunos == this.alunos.length) {
-            Aluno[] novoArray = new Aluno[alunos.length * 2];
-            for (int i = 0; i < this.alunos.length; i++) {
-                novoArray[i] = this.alunos[i];
-            }
         }
     }
 

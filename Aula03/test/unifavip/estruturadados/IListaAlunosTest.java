@@ -160,6 +160,21 @@ public class IListaAlunosTest {
         public String listaTodos() {
             return "";
         }
+
+        @Override
+        public void adicionaNoComeco(Aluno aluno) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void removeDoComeco() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void removeDoFim() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
     }
 
 }

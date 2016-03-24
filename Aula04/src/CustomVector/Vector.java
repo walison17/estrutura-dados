@@ -5,7 +5,6 @@
  */
 package CustomVector;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,13 +14,14 @@ import java.util.List;
  */
 public class Vector<T> implements IVector<T> {
 
-    private T[] list = (T[]) new Object[100];
+//    private T[] list = (T[]) new Object[100];
+    private List[] list = new List[100];
     private int size;
 
     @Override
     public void add(T element) {
         if (element != null) {
-            this.generateArray();
+            this.garantaEspaco();
             list[size] = element;
             size++;
         }
@@ -33,7 +33,7 @@ public class Vector<T> implements IVector<T> {
             throw new IllegalArgumentException("Posição inválida!");
         }
         
-        this.generateArray();
+        this.garantaEspaco();
         
         if (element != null) {
             for (int i = this.size() - 1; i >= pos; i--) {
@@ -44,14 +44,14 @@ public class Vector<T> implements IVector<T> {
         }
     }
 
-    @Override
-    public T get(int pos) {
-        if (!posicaoOcupada(pos)) {
-            throw new IllegalArgumentException("Posição inválida!");
-        } else {
-            return list[pos];
-        }
-    }
+//    @Override
+//    public T get(int pos) {
+//        if (!posicaoOcupada(pos)) {
+//            throw new IllegalArgumentException("Posição inválida!");
+//        } else {
+//            return list[pos];
+//        }
+//    }
 
     @Override
     public void remove(int pos) {
@@ -80,10 +80,12 @@ public class Vector<T> implements IVector<T> {
         return this.size == 0;
     }
 
-    private void generateArray() {
-        if (this.list.length == this.size) {
-            T[] temp = (T[]) new Object[this.list.length * 2];
-            System.arraycopy(this.list, 0, temp, 0, this.list.length);
+    private void garantaEspaco() {
+        if (this.size == this.list.length) {
+            Object []temp = new Object[this.list.length];
+            for (int i = 0; i < this.list.length; i++) {
+                temp[i] = this.list[i];
+            }
             this.list = temp;
         }
     }
