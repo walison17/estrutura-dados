@@ -10,7 +10,7 @@ package CustomVector;
  * @author walison
  * @param <T> tipo
  */
-public interface IVector<T> {
+public interface IMetodos<T> {
 
     void add(T element);
 

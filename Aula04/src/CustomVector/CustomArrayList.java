@@ -5,23 +5,30 @@
  */
 package CustomVector;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
  *
  * @author walison
- * @param <T> tipo que a classe Vector vai armazenar
+ * @param <T> tipo que a classe CustomArrayList vai armazenar
  */
-public class Vector<T> implements IVector<T> {
+public class CustomArrayList<T> implements IMetodos<T> {
 
-//    private T[] list = (T[]) new Object[100];
-    private List[] list = new List[100];
+    private static final int INITIAL_CAPACITY = 10;
+    private Object[] list;
     private int size;
+
+    public CustomArrayList() {
+        list = new Object[INITIAL_CAPACITY];
+    }
 
     @Override
     public void add(T element) {
         if (element != null) {
-            this.garantaEspaco();
+            if (this.size == this.list.length) {
+                this.aumentarCapacidade();
+            }
             list[size] = element;
             size++;
         }
@@ -32,9 +39,9 @@ public class Vector<T> implements IVector<T> {
         if (!posicaoValida(pos)) {
             throw new IllegalArgumentException("Posição inválida!");
         }
-        
-        this.garantaEspaco();
-        
+        if (this.size == this.list.length) {
+            this.aumentarCapacidade();
+        }
         if (element != null) {
             for (int i = this.size() - 1; i >= pos; i--) {
                 list[i + 1] = list[i];
@@ -44,18 +51,17 @@ public class Vector<T> implements IVector<T> {
         }
     }
 
-//    @Override
-//    public T get(int pos) {
-//        if (!posicaoOcupada(pos)) {
-//            throw new IllegalArgumentException("Posição inválida!");
-//        } else {
-//            return list[pos];
-//        }
-//    }
+    @Override
+    public T get(int pos) {
+        if (pos < 0 || pos >= size) {
+            throw new IllegalArgumentException("Posição inválida!");
+        }
+        return (T) list[pos];
+    }
 
     @Override
     public void remove(int pos) {
-        if (!posicaoOcupada(pos)) {
+        if (pos < 0 || pos >= size) {
             throw new IllegalArgumentException("Posição inválida!");
         }
         for (int i = pos; i < this.list.length - 1; i++) {
@@ -80,21 +86,13 @@ public class Vector<T> implements IVector<T> {
         return this.size == 0;
     }
 
-    private void garantaEspaco() {
-        if (this.size == this.list.length) {
-            Object []temp = new Object[this.list.length];
-            for (int i = 0; i < this.list.length; i++) {
-                temp[i] = this.list[i];
-            }
-            this.list = temp;
-        }
+    private void aumentarCapacidade() {
+        int novaCapacidade = list.length * 2;
+        list = Arrays.copyOf(list, novaCapacidade);
     }
 
     private boolean posicaoValida(int pos) {
         return pos >= 0 && pos <= this.size;
     }
 
-    private boolean posicaoOcupada(int pos) {
-        return pos >= 0 && pos < this.size;
-    }
 }
