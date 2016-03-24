@@ -87,7 +87,6 @@ public class Vetor implements IListaAlunos {
                 break;
             }
         }
-
         return contemAluno;
     }
 
